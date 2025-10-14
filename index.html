@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calculator-container">
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider"></span>
+      </label>
+      <span class="theme-label">🌞 / 🌙</span>
+    </div>
+
+    <div class="display">
+      <input type="text" id="display" disabled />
+    </div>
+
+    <div class="buttons">
+      <!-- Row 1 -->
+      <button>sin</button><button>cos</button><button>tan</button>
+      <button class="mode">Deg</button><button class="mode">Rad</button>
+
+      <!-- Row 2 -->
+      <button>sin⁻¹</button><button>cos⁻¹</button><button>tan⁻¹</button>
+      <button>π</button><button>e</button>
+
+      <!-- Row 3 -->
+      <button>xʸ</button><button>x³</button><button>x²</button>
+      <button>eˣ</button><button>10ˣ</button>
+
+      <!-- Row 4 -->
+      <button>ʸ√x</button><button>³√x</button><button>√x</button>
+      <button>ln</button><button>log</button>
+
+      <!-- Row 5 -->
+      <button>(</button><button>)</button><button>1/x</button>
+      <button>%</button><button>n!</button>
+
+      <!-- Row 6 -->
+      <button>7</button><button>8</button><button>9</button>
+      <button class="operator">+</button><button id="back">⌫</button>
+
+      <!-- Row 7 -->
+      <button>4</button><button>5</button><button>6</button>
+      <button class="operator">−</button><button id="ans">Ans</button>
+
+      <!-- Row 8 -->
+      <button>1</button><button>2</button><button>3</button>
+      <button class="operator">×</button><button id="mplus">M+</button>
+
+      <!-- Row 9 -->
+      <button>0</button><button>.</button><button>EXP</button>
+      <button class="operator">÷</button><button id="mminus">M-</button>
+
+      <!-- Row 10 -->
+      <button>±</button><button id="rnd">RND</button>
+      <button id="ac" class="ac">AC</button>
+      <button id="equal" class="equal">=</button><button id="mr">MR</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--bg);
+  transition: 0.3s;
+}
+
+/* Default (Light Theme) */
+:root {
+  --bg: #f4f5f8;
+  --button-bg: #ffffff;
+  --button-hover: #e5e8ee;
+  --display-bg: #1a1f2b;
+  --display-color: #ffffff;
+  --operator-bg: #0d6efd;
+  --operator-color: #fff;
+  --equal-bg: #198754;
+  --equal-color: #fff;
+  --text-color: #222;
+  --special-bg: #dc3545;
+  --special-color: #fff;
+}
+
+/* Dark Theme */
+body.dark {
+  --bg: #181818;
+  --button-bg: #2a2a2a;
+  --button-hover: #3a3a3a;
+  --display-bg: #000;
+  --display-color: #00ff99;
+  --operator-bg: #007bff;
+  --operator-color: #fff;
+  --equal-bg: #00c853;
+  --equal-color: #fff;
+  --text-color: #f4f4f4;
+  --special-bg: #ff3b30;
+  --special-color: #fff;
+}
+
+.calculator-container {
+  width: 340px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  background: var(--button-bg);
+  transition: 0.3s;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.theme-label {
+  color: var(--text-color);
+  margin-left: 6px;
+  font-size: 0.9rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 22px;
+  transition: 0.3s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(23px);
+}
+
+/* Display */
+.display input {
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  text-align: right;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--display-color);
+  background: var(--display-bg);
+  margin-bottom: 12px;
+}
+
+/* Buttons Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+button {
+  height: 42px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--button-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: var(--button-hover);
+}
+
+.operator {
+  background: var(--operator-bg);
+  color: var(--operator-color);
+}
+
+.equal {
+  background: var(--equal-bg);
+  color: var(--equal-color);
+}
+
+.ac {
+  background: var(--special-bg);
+  color: var(--special-color);
+}
+
+.mode {
+  background: #ffc107;
+  color: #000;
+  font-weight: 600;
+}
